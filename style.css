@@ -1,0 +1,105 @@
+* {}
+
+body {
+    background-color: black;
+    min-height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    color: white;
+}
+
+.hero {
+    min-height: 100vh;
+    width: 100vw;
+    animation: animateBg 5s linear infinite;
+    animation-direction: alternate, reverse, normal;
+    background-image: linear-gradient(35deg, #26035e, #000000, #5f0f40, #000000, #26035e);
+    background-size: 400% 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero h1 {
+    font-family: "Rubik", sans-serif;
+    font-size: 3rem;
+    padding-inline: 3rem;
+    display: inline-block;
+    background: linear-gradient(to right, #ffffff, #a6fff9, #e0a1ff, #feb4b4 );
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: gradient-animation 3s linear infinite;
+    animation-direction: alternate, reverse, normal;
+}
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% center;
+    }
+
+    100% {
+        background-position: 100% center;
+    }
+}
+
+@keyframes animateBg {
+    0% {
+        background-position: 0% 0%;
+    }
+
+    100% {
+        background-position: 100% 0%;
+    }
+}
+
+.corner-tl {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 50vw;
+    height: auto;
+}
+
+.corner-br {
+    position: absolute;
+    bottom: 0px;
+    right: 0;
+    width: 50vw;
+    height: auto;
+}
+
+@media only screen and (min-width: 500px) {
+
+    .corner-br,
+    .corner-tl {
+        width: 40vw;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+
+    .corner-br,
+    .corner-tl {
+        width: 30vw;
+    }
+}
+
+@media only screen and (min-width: 700px) {
+
+    .corner-br,
+    .corner-tl {
+        width: 20vw;
+    }
+}
+
+
+@media only screen and (min-width: 800px) {
+
+    .corner-br,
+    .corner-tl {
+        width: 15vw;
+    }
+}
